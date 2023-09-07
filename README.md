@@ -35,7 +35,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 ### 真值表和运算符
 > 真值表（truth table）给出了命题真值之间的关系。
 
-<div id="cer" align="center">
+<div id="table" align="center">
  
 |p|┐p|
 |----|----|
