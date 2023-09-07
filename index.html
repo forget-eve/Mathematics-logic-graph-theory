@@ -12,33 +12,10 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      // 定义自定义插件函数
-      function renderMarkdownWithIdDiv(hook, vm) {
-        hook.beforeEach(function (content) {
-          // 使用正则表达式匹配具有 id="cer" 的 div 区块
-          const regex = /<div id="cer".*?>([\s\S]*?)<\/div>/g;
-          content = content.replace(regex, function (match, markdownContent) {
-            // 将匹配的内容进行 Markdown 渲染
-            const renderedMarkdown = Docsify.compiler.render(markdownContent);
-            // 返回渲染后的内容
-            return renderedMarkdown;
-          });
-          return content;
-        });
-      }
-      
-      // 注册自定义插件函数到 hook.init
-      hook.init(function () {
-        Docsify.plugin(renderMarkdownWithIdDiv);
-      });
-      
+    <script
       window.$docsify = { 
         homepage:'README.md',
-        themeColor: '#143657',
-        plugins: [
-          renderMarkdownWithIdDiv // 这里是自定义插件函数的引用
-        ],
+        themeColor: '#b2b8b4',
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
