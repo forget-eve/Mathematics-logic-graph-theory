@@ -28,6 +28,11 @@
         });
       }
       
+      // 注册自定义插件函数到 hook.init
+      hook.init(function () {
+        Docsify.plugin(renderMarkdownWithIdDiv);
+      });
+      
       window.$docsify = { 
         homepage:'README.md',
         themeColor: '#143657',
