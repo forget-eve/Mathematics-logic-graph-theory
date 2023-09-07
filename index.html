@@ -20,7 +20,7 @@
           renderer: {
               // 自定义规则，匹配带有 "markdown-render" 类的 div
               html: function (html) {
-                  const markdownRenderDiv = /<div id="table">(.*?)<\/div>/s;
+                  const markdownRenderDiv = /<div id="table" align="center">(.*?)<\/div>/s;
                   if (markdownRenderDiv.test(html)) {
                       return html.replace(markdownRenderDiv, function (match, markdownContent) {
                           // 渲染被匹配的内容为 Markdown
