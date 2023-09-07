@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/themes/Dolphin.css"
+      href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"
     />
     <title>数理逻辑与图论</title>
   </head>
@@ -16,6 +16,13 @@
       window.$docsify = { 
         homepage:'README.md',
         themeColor: '#143657',
+        markdown: {
+          // 启用 extend 选项来支持自定义块元素
+          extend: {
+            // 定义自定义块元素的名称，这里使用 markdown-cer，对应上面定义的 :::
+            'markdown-cer': 'markdown-cer',
+          },
+        },
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
