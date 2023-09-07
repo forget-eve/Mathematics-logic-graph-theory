@@ -35,13 +35,25 @@ x+1＝2（含有变量无法判断真假），几点了？
 ### 真值表和运算符
 > 真值表（truth table）给出了命题真值之间的关系。
 
-<div id="cer" align="center">
- 
-|p|┐p|
-|----|----|
-|T|F|
-|F|T|
-
+<div align="center">
+ <table>
+   <thead>
+     <tr>
+       <th>p</th>
+       <th>¬p</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>T</td>
+       <td>F</td>
+     </tr>
+     <tr>
+       <td>F</td>
+       <td>T</td>
+     </tr>
+   </tbody>
+ </table>
 </div>
 
 - 运算符（operator）可以从已有命题构造新命题。有时可称为联接词（connective）。
@@ -54,47 +66,155 @@ x+1＝2（含有变量无法判断真假），几点了？
 > 令p和q为命题。用p∧q表示这样一个命题：当p和q均为真命题时它为真，否则为假。命题p∧q称为p和q的合取。
 注:***理解为集合运算交运算，有一个为假就为假*** 。
 
-|p|q|p∧q|
-|----|----|----|
-|T|T|T|
-|F|T|F|
-|T|F|F|
-|F|F|F|
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p∧q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 - - -
 ### 析取（disjunction）
 > 令p和q为命题。用p∨q表示这样一个命题：当p和q均为假命题时它为假，否则为真。命题p∨q称为p和q的析取。
 ***注意:理解为同或或者集合中的并运算，有一个为真就为真***
 
-|p|q|p∨q|
-|----|----|----|
-|T|T|T|
-|F|T|T|
-|T|F|T|
-|F|F|F|
-
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p∨q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ 
 - - -
 ### 异或（exclusive or）
 > 令p和q为命题。p和q的异或，用p⊕q表示，是这样一个命题：当p和q中恰有一个为真时它为真，否则为假。
 
-|p|q|p⊕q|
-|----|----|----|
-|T|T|F|
-|F|T|T|
-|T|F|T|
-|F|F|F|
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p⊕q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 - - -
 ### 蕴含（implication）
 > 令p和q为命题。蕴含p→q是这样一个命题：当p为真而q为假时它为假，否则为真。p称为假设（或前提，前项），q称为结论（或推论）。一个蕴含有时也称为条件语句（conditional statement）
 > >  ***注意：只有在p为真而q为假时， p→q才为假。如果p为假，则不管q的真值是什么， p→q都为真。***
 
-|p|q|p→q|
-|----|----|----|
-|T|T|T|
-|F|T|F|
-|T|F|T|
-|F|F|T|
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p→q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 > 计算机语言“if then”和蕴含的区别“if 2+2=4 then x:=x+1”不是蕴含，因为包含未知参数，所以两个语句都不是命题，从而不是蕴含。
 
@@ -112,12 +232,39 @@ x+1＝2（含有变量无法判断真假），几点了？
 > 令p和q为命题。双蕴含p↔q是这样一个命题：当p和q具有相同真值时它为真，否则为假。一个双蕴含有时也称为双条件语句（biconditional statement），可理解为p为q的充要条件。
 > > ***可理解为异或的反取***
 
-|p|q|p↔q|
-|----|----|----|
-|T|T|T|
-|F|T|F|
-|T|F|F|
-|F|F|T|
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p↔q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 #### 双蕴含的含义
 - 双蕴含p↔q恰在p→q和q→p均为真时为真。我们常用术语“p当且仅当q”来表示这一双蕴含。
@@ -130,13 +277,38 @@ x+1＝2（含有变量无法判断真假），几点了？
 - - -
 ### 逻辑运算符的优先级
 
-|运算符|优先等级|
-|----|----|
-|┐|1|
-|∧|2|
-|∨|3|
-|→|4|
-|↔|5|
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>运算符</th>
+      <th>优先等级</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>┐</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>∧</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>∨</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>→</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>↔</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ***注:在容易混淆的情况下，尽量使用括号 。***
 - - -
@@ -188,11 +360,33 @@ s：你已满16周岁；
 - 可能式（contingency）：既不是永真式，又不是矛盾的命题。
 例:`p∨┐p` 为永真式，`p∧┐p` 为矛盾。
 
-|p|┐p|p∨┐p|p∧┐p|
-|----|----|----|----|
-|T|F|T|F|
-|F|T|T|F|
-
+<div align="center">
+ <table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>┐p</th>
+      <th>p∨┐p</th>
+      <th>p∧┐p</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ 
 ### 重言式的性质
 
 - 任何两个重言式的合取、析取、蕴含或双蕴含，仍然是一个重言式。（两个为真命题上述运算也全为真，**矛盾没有该性质**）
