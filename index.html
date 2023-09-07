@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"
+      href="//cdn.jsdelivr.net/npm/docsify@4/themes/dark.css"
     />
     <title>数理逻辑与图论</title>
   </head>
@@ -18,18 +18,18 @@
         themeColor: '#143657',
         markdown: {
           renderer: {
-              // 自定义规则，匹配带有 "markdown-render" 类的 div
-              html: function (html) {
-                  const markdownRenderDiv = /<div id="table" align="center">(.*?)<\/div>/s;
-                  if (markdownRenderDiv.test(html)) {
-                      return html.replace(markdownRenderDiv, function (match, markdownContent) {
-                          // 渲染被匹配的内容为 Markdown
-                          return marked(markdownContent);
-                      });
-                  } else {
-                      return html;
-                  }
+            // 自定义规则，匹配带有 "markdown-render" 类的 div
+            html: function (html) {
+                const markdownRenderDiv = /<div id="table" align="center">(.*?)<\/div>/s;
+                if (markdownRenderDiv.test(html)) {
+                  return html.replace(markdownRenderDiv, function (match, markdownContent) {
+                      // 渲染被匹配的内容为 Markdown
+                      return marked(markdownContent);
+                  });
+              } else {
+                  return html;
               }
+            }
           }
         }
       };
