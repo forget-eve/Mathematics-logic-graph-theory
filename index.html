@@ -17,12 +17,21 @@
         homepage:'README.md',
         themeColor: '#143657',
         markdown: {
-          // 启用 extend 选项来支持自定义块元素
-          extend: {
-            // 定义自定义块元素的名称，这里使用 markdown-cer，对应上面定义的 :::
-            'markdown-cer': 'markdown-cer',
-          },
-        },
+          renderer: {
+              // 自定义规则，匹配带有 "markdown-render" 类的 div
+              html: function (html) {
+                  const markdownRenderDiv = /<div id="table">(.*?)<\/div>/s;
+                  if (markdownRenderDiv.test(html)) {
+                      return html.replace(markdownRenderDiv, function (match, markdownContent) {
+                          // 渲染被匹配的内容为 Markdown
+                          return marked(markdownContent);
+                      });
+                  } else {
+                      return html;
+                  }
+              }
+          }
+        }
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
