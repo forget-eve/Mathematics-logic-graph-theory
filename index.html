@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/themes/Dolphin.css"
     />
-    <script src="//cdn.jsdelivr.net/npm/marked@2"></script>
     <title>数理逻辑与图论</title>
   </head>
   <body>
@@ -17,25 +16,7 @@
       window.$docsify = { 
         homepage:'README.md',
         themeColor: '#143657',
-        // 添加 afterEach 钩子
-        afterEach: function (content) {
-          var cerDivs = content.match(/<div id="cer".*?>([\s\S]*?)<\/div>/gm);
-
-          if (cerDivs) {
-            cerDivs.forEach(function (cerDiv) {
-              var markdownContent = cerDiv.match(/<div id="cer".*?>([\s\S]*?)<\/div>/)[1];
-              var renderedHtml = markdownToHtml(markdownContent);
-              content = content.replace(cerDiv, renderedHtml);
-            });
-          }
-
-          return content;
-        },
       };
-
-      function markdownToHtml(markdown) {
-        return marked(markdown);
-      }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   </body>
