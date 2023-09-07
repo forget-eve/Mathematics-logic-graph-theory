@@ -37,10 +37,12 @@ x+1＝2（含有变量无法判断真假），几点了？
 
 <div id="cer" align="center">
  
+::: markdown-cer
 |p|┐p|
 |----|----|
 |T|F|
 |F|T|
+:::
 
 </div>
 
