@@ -608,7 +608,12 @@ $$┑(p_1 ∧ p_2 ∧...∧p_n)≡(┑p_1 ∨┑ p_2 ∨...∨┑p_n)$$
 
 $$\begin{equation}
 \begin{aligned}
-\lnot(\bigvee^n_{i=1} p_i) &\equiv \bigwedge^n_{i=1} \lnot p_i \\
+\lnot(\bigvee^n_{i=1} p_i) &\equiv \bigwedge^n_{i=1} \lnot p_i 
+\end{aligned}
+\end{equation}$$
+
+$$\begin{equation}
+\begin{aligned}
 \lnot(\bigwedge^n_{i=1} p_i) &\equiv \bigvee^n_{i=1} \lnot p_i
 \end{aligned}
 \end{equation}$$
