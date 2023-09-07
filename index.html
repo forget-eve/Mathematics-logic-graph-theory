@@ -6,32 +6,34 @@
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/themes/dark.css"
+      href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"
     />
     <title>数理逻辑与图论</title>
   </head>
   <body>
     <div id="app"></div>
     <script>
+      // 定义自定义插件函数
+      function renderMarkdownWithIdDiv(hook, vm) {
+        hook.beforeEach(function (content) {
+          // 使用正则表达式匹配具有 id="cer" 的 div 区块
+          const regex = /<div id="cer".*?>([\s\S]*?)<\/div>/g;
+          content = content.replace(regex, function (match, markdownContent) {
+            // 将匹配的内容进行 Markdown 渲染
+            const renderedMarkdown = Docsify.compiler.render(markdownContent);
+            // 返回渲染后的内容
+            return renderedMarkdown;
+          });
+          return content;
+        });
+      }
+      
       window.$docsify = { 
         homepage:'README.md',
         themeColor: '#143657',
-        markdown: {
-          renderer: {
-            // 自定义规则，匹配带有 "markdown-render" 类的 div
-            html: function (html) {
-                const markdownRenderDiv = /<div id="table" align="center">(.*?)<\/div>/s;
-                if (markdownRenderDiv.test(html)) {
-                  return html.replace(markdownRenderDiv, function (match, markdownContent) {
-                      // 渲染被匹配的内容为 Markdown
-                      return marked(markdownContent);
-                  });
-              } else {
-                  return html;
-              }
-            }
-          }
-        }
+        plugins: [
+          renderMarkdownWithIdDiv // 这里是自定义插件函数的引用
+        ],
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
