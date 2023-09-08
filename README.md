@@ -740,7 +740,7 @@ $$\begin{equation}
 
 ### 量词总结
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>语句</th>
@@ -797,7 +797,7 @@ $$\begin{equation}
 
 <div align="center">
  <h6><strong>量词的否定</strong></h6>
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>否定</th>
@@ -831,7 +831,7 @@ $$\begin{equation}
 #### 常见的量词的逻辑等价
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>量词的逻辑等价</th>
