@@ -32,7 +32,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 ### 真值表和运算符
 > 真值表（truth table）给出了命题真值之间的关系。
 
-<div align="center">
+<center>
  <table>
    <thead>
      <tr>
@@ -51,7 +51,7 @@ x+1＝2（含有变量无法判断真假），几点了？
      </tr>
    </tbody>
  </table>
-</div>
+</center>
 
 - 运算符（operator）可以从已有命题构造新命题。有时可称为联接词（connective）。
 - 非运算符： ┐
