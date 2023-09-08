@@ -63,7 +63,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 注:***理解为集合运算交运算，有一个为假就为假*** 。
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
