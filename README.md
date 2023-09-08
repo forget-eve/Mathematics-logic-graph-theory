@@ -664,10 +664,10 @@ $$\begin{equation}
 - [ ] 命题p(i,j,n)：当数n位于第i行第j列的单元时为真
 - [ ] 数独的解需满足（以下所有的合取）：
   > - [x] 已知数对应单元的p(i,j,n)为真，如p(1,7,4)
-  > - [x] 每一行包含了每一个数 $\bigwedge\limits^9_{i=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{j=1} p(i,j,n)$
+  > - [x] 每一行包含了每一个数 $$\bigwedge\limits^9_{i=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{j=1} p(i,j,n)$$
   > - [x] 每一列包含了每一个数 $$\bigwedge\limits^9_{j=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{i=1} p(i,j,n)$$
-  > - [x] 每一个九宫格包含了每一个数 $\bigwedge\limits^2_{r=0}  \bigwedge\limits^2_{s=1} \bigwedge\limits^9_{n=1} \bigvee\limits^9_{i=1} \bigvee\limits^9_{j=1} p(3r+i,3s+j,n)$
-  > - [x] 没有一个单元包含多余一个数 $p(i,j,n)→\lnot p(3r+i,3s+j,n)$
+  > - [x] 每一个九宫格包含了每一个数 $$\bigwedge\limits^2_{r=0}  \bigwedge\limits^2_{s=1} \bigwedge\limits^9_{n=1} \bigvee\limits^9_{i=1} \bigvee\limits^9_{j=1} p(3r+i,3s+j,n)$$
+  > - [x] 没有一个单元包含多余一个数 $$p(i,j,n)→\lnot p(3r+i,3s+j,n)$$
 
 ## 1.4 谓词和量词
 
