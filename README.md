@@ -664,10 +664,10 @@ $$\begin{equation}
 - [ ] 命题p(i,j,n)：当数n位于第i行第j列的单元时为真
 - [ ] 数独的解需满足（以下所有的合取）：
   > - [x] 已知数对应单元的p(i,j,n)为真，如p(1,7,4)
-  > - [x] 每一行包含了每一个数 $$\bigwedge\limits^9_{i=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{j=1} p(i,j,n)$$
-  > - [x] 每一列包含了每一个数 $$\bigwedge\limits^9_{j=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{i=1} p(i,j,n)$$
-  > - [x] 每一个九宫格包含了每一个数 $$\bigwedge\limits^2_{r=0}  \bigwedge\limits^2_{s=1} \bigwedge\limits^9_{n=1} \bigvee\limits^9_{i=1} \bigvee\limits^9_{j=1} p(3r+i,3s+j,n)$$
-  > - [x] 没有一个单元包含多余一个数 $$p(i,j,n)→\lnot p(3r+i,3s+j,n)$$
+  > - [x] 每一行包含了每一个数 $\bigwedge\limits^9_{i=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{j=1} p(i,j,n)$
+  > - [x] 每一列包含了每一个数 $\bigwedge\limits^9_{j=1}  \bigwedge\limits^9_{n=1}  \bigvee\limits^9_{i=1} p(i,j,n)$
+  > - [x] 每一个九宫格包含了每一个数 $\bigwedge\limits^2_{r=0}  \bigwedge\limits^2_{s=1} \bigwedge\limits^9_{n=1} \bigvee\limits^9_{i=1} \bigvee\limits^9_{j=1} p(3r+i,3s+j,n)$
+  > - [x] 没有一个单元包含多余一个数 $p(i,j,n)→\lnot p(3r+i,3s+j,n)$
 
 ## 1.4 谓词和量词
 
@@ -702,7 +702,7 @@ $$\begin{equation}
 
 - P(x)的全称量化是命题“P(x)对x在其论域的所有值为真”，记为∀xP(x)。其中∀称为全称量词。
 - 命题∀xP(x)表示为“对所有x，P(x)”或“对每个x，P(x)”。
-   > 当论域中的所有元素可以一一列出时∀xP(x) ≡ P(x1)∧P(x2)∧…∧P(xn)
+   > 当论域中的所有元素可以一一列出时 $∀xP(x) ≡ P(x_1)∧P(x_2)∧…∧P(x_n)$
    
    > 使用量词时，论域是很重要的
    
@@ -763,8 +763,8 @@ $$\begin{equation}
 </table>
 </div>
 
-- 唯一性量词（∃!或∃1）：存在唯一的x使P(x)为真
-  > ∃! xP(x)
+- 唯一性量词（∃!或 $∃_1$ ）：存在唯一的x使P(x)为真
+  > ∃!xP(x)
 - 量词的优先级：高于合取/析取等逻辑运算符
   > ∃xP(x)∧Q(x)=(∃xP(x))∧Q(x)
 
