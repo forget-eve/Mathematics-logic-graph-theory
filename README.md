@@ -33,7 +33,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 > 真值表（truth table）给出了命题真值之间的关系。
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
    <thead>
      <tr>
        <th>p</th>
@@ -101,7 +101,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 ***注意:理解为同或或者集合中的并运算，有一个为真就为真***
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
@@ -138,7 +138,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 > 令p和q为命题。p和q的异或，用p⊕q表示，是这样一个命题：当p和q中恰有一个为真时它为真，否则为假。
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
@@ -176,7 +176,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 > >  ***注意：只有在p为真而q为假时， p→q才为假。如果p为假，则不管q的真值是什么， p→q都为真。***
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
@@ -226,7 +226,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 > > ***可理解为异或的反取***
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
@@ -270,7 +270,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 ### 逻辑运算符的优先级
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>运算符</th>
@@ -358,7 +358,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 例:`p∨┐p` 为永真式，`p∧┐p` 为矛盾。
 
 <div align="center">
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>p</th>
@@ -409,7 +409,7 @@ x+1＝2（含有变量无法判断真假），几点了？
   > - [x] 德摩根定律： ┐(p∨q) ≡ ┐p∧┐q
 
 <div align="center">
-  <table style="margin:0 auto;text-align:center">
+  <table>
    <thead>
      <tr>
        <th>p</th>
@@ -470,7 +470,7 @@ x+1＝2（含有变量无法判断真假），几点了？
 ##### 等价表
 <div align="center">
   <h6><strong>逻辑等价式</strong></h6>
-  <table style="margin:0 auto;text-align:center">
+  <table>
   <thead>
     <tr>
       <th>等价式</th>
@@ -521,7 +521,7 @@ x+1＝2（含有变量无法判断真假），几点了？
   </tbody>
 </table>
  <h6><strong>条件命题的逻辑等价式</strong></h6>
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>逻辑等价式</th>
@@ -572,7 +572,7 @@ x+1＝2（含有变量无法判断真假），几点了？
   </tbody>
 </table>
 <h6><strong>双条件命题的逻辑等价式</strong></h6>
- <table style="margin:0 auto;text-align:center">
+ <table>
   <thead>
     <tr>
       <th>逻辑等价式</th>
