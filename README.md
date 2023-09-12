@@ -727,7 +727,7 @@ $$\begin{equation}
 
 - P(x)的存在量化是命题“论域中存在一个元素x使P(x)为真”，记为∃xP(x)。其中∃称为存在量词。（存在一个但也可以不止一个）
 - 命题∃xP(x)表示为“有一个x使得P(x)”或“对某个x，P(x)”。
-   > 当论域中的所有元素可以一一列出时 $∃xP(x) ≡ P(x_1)∨P(x_2)∨….∨P(x_n)$
+   > 当论域中的所有元素可以一一列出时 $∃xP(x) ≡ P(x_1)∨P(x_2)∨…∨P(x_n)$
    > 
    > 使用量词时，论域是很重要的
 
@@ -1116,6 +1116,57 @@ p→q为真
 
 #### 一些基本的推理规则
 
+<div align="center">
+ <p align="center"><span>推理规则</span></p>
+ <table>
+  <tr>
+    <th>推理规则</th>
+    <th>永真式</th>
+    <th>名称</th>
+  </tr>
+  <tr>
+    <td>p<br>p→q<br>∴q</td>
+    <td>(p∧(p→q))→q</td>
+    <td>假言推理</td>
+  </tr>
+  <tr>
+    <td>┐q<br>p→q<br>∴┐p</td>
+    <td>(┐p∧(p→q)→┐p)</td>
+    <td>取拒式</td>
+  </tr>
+  <tr>
+    <td>p→q<br>q→r<br>∴p→r</td>
+    <td>((p→q)∧(q→r))→(p→r)</td>
+    <td>假言三段论</td>
+  </tr>
+  <tr>
+    <td>p∨q<br>┐q<br>∴q</td>
+    <td>((p∨q)∧┐q)→q</td>
+    <td>析取三段式</td>
+  </tr>
+  <tr>
+    <td>p<br>∴(p∨q)</td>
+    <td>p→(p∨q)</td>
+    <td>附加律</td>
+  </tr>
+  <tr>
+    <td>p∧q<br>∴p</td>
+    <td>(p∧q)→p</td>
+    <td>化简律</td>
+  </tr>
+  <tr>
+    <td>p<br>q<br>∴p∧q</td>
+    <td>((p)∧(q))→(p∧q)</td>
+    <td>合取律</td>
+  </tr>
+  <tr>
+    <td>p∨q<br>┐p∨r<br>∴q∧r</td>
+    <td>((p∨q)∧(┐p∨r))→(q∧r)</td>
+    <td>消解律</td>
+  </tr>
+</table>
+</div>
+
 ### 假言三段论的例子
 > 一般形如以下形式的论证为是假言三段论(hypothetical syllogism)
 ```math
@@ -1180,6 +1231,32 @@ q→r
 > q: 你学习过离散数学
 
 ### 带量词命题的推理规则
+
+<div align="center">
+ <table>
+  <tr>
+    <th>推理规则</th>
+    <th>名称</th>
+  </tr>
+  <tr>
+    <td>∀xP(x)<br>∴P(c)</td>
+    <td>全称实例</td>
+  </tr>
+  <tr>
+    <td>P(x), 任意c<br>∴∀xP(x)</td>
+    <td>全称引入</td>
+  </tr>
+  <tr>
+    <td>∃xP(x)<br>∴P(c), 对某个元素c</td>
+    <td>存在实例</td>
+  </tr>
+  <tr>
+    <td>P(c), 对某个元素c<br>∴∃xP(x)</td>
+    <td>存在引入</td>
+  </tr>
+</table>
+</div>
+
 > 例1:
 > > 证明前提“在这个班上的某个学生没有读过书”和“班上的每个人都通过了第一门考试”蕴含结论“通过考试的某个人没有读过书”。
 > > 
