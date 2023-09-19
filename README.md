@@ -1644,9 +1644,9 @@ $$\overline{A}=\lbrace x|x∉A\rbrace$$
 > 例如：可以用成员表证明 $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$
 - [ ] 使用已经证明的集合恒等式来证明其它集合恒等式。
 > 例如：证明 $\overline{A \cup (B \cup C)}=(\bar C \cup \bar B)\cap \bar A$
-> > 证明：$\overline{A \cup (B \cup C)}=\bar A \cap \overline{B \cap C}$
+> > 证明： $\overline{A \cup (B \cup C)}=\bar A \cap \overline{B \cap C}$
 > >
-> > $=\bar A \cap (\bar B \cup \bar C}$ (再利用交换律即可)
+> > $=\bar A \cap (\bar B \cup \bar C)$ (再利用交换律即可)
 
 ### 扩展的并集和交集
 - [x] 一组集合的并集是包含那些至少是这组集合中一个集合成员的元素的集合。
