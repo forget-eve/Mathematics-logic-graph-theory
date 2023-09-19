@@ -1564,12 +1564,23 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 - [x] 令A和B为集合。A和B的并集（union）用A∪B表示，这是在A或B中或同时在A和B中的元素组成的集合。
       $$A \cup B=\llbrace x|x∈A ∨ x∈B\rbrace$$
 
+<p align="center">
+	 <img src="./img/并集文氏图.png" alt="并集文氏图">
+	 <p align="center"><span>并集文氏图</span></p>
+</p>
+
 > 例：{1,3,5}∪{1,2,3} = {1,2,3,5}
 
 ### 交集
 - [x] 令A和B为集合。A和B的交集(intersection)用A∩B表示，这是既在A中又在B中的元素组成的集合。
       $$A \cap B=\lbrace x|x∈A ∧ x∈B\rbrace$$
 - [x] 如果两个集合的交集为空集，就说它们不相交(disjoint)
+
+<p align="center">
+	 <img src="./img/交集文氏图.png" alt="交集文氏图">
+	 <p align="center"><span>交集文氏图</span></p>
+</p>
+
 > 例：{1,3,5}∩{1,2,3} = {1,3}
 >
 > {1,5}∩{2,3} = ∅
@@ -1577,17 +1588,47 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 #### 容斥原理
 - [x] 容斥原理（principle of inclusion-exclusion）：计算集合并集的基数
 $$|A \cup B|=|A|+|B|-|A \cap B|$$
+
+<p align="center">
+	 <img src="./img/容斥原理文氏图.png" alt="容斥原理文氏图">
+	 <p align="center"><span>容斥原理文氏图</span></p>
+</p>
+
 ### 差集
 - [x] 令A和B为集合。A和B的差集（difference）用A-B表示，这是只属于A而不属于B的所有元素组成的集合。A和B的差集也称为B对于A的补集。
 $$A-B=\lbrace x|x∈A ∧ x∉B\rbrace$$
+
+<p align="center">
+	 <img src="./img/差集文氏图.png" alt="差集文氏图">
+	 <p align="center"><span>差集文氏图</span></p>
+</p>
 
 > 例：A= {1,3,5},B={1,2,3} ，A∩B= {1,3} ，A-B = {5}，B-A = {2}
 ### 补集
 令U为全集。集合A的补集（complement）用 $\overline{A}$表示，这是A对于U的补集，即U-A。
 $$\overline{A}=\lbrace x|x∉A\rbrace$$
 
+<p align="center">
+	 <img src="./img/补集文氏图.png" alt="补集文氏图">
+	 <p align="center"><span>补集文氏图</span></p>
+</p>
+
 ### 集合恒等式
-- [x] 如下表所示
+- [x] 如下表所示(U为全集)
+
+|恒等式|名称|
+|----|----|
+| $A\cap U=A$ <br> $A\cup \emptyset=A$ |恒等律|
+| $A\cup U=U$ <br> $A\cup \emptyset=\emptyset$ |支配率|
+| $A\cap A=A$ <br> $A\cup A=At$ |幂等律|
+| $overline{(overline{A})}=A$ |补律|
+| $A\cap B=B \cap A$ <br> $A\cup B=B\cup A$ |交换律|
+| $A \cup (B\cup C)=(A \cup B)\cup C$ <br> $A \cap (B\cap C)=(A \cap B)\cap C$ |结合律|
+| $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$ <br> $A \cup (B \cap C)=(A \cup B)\cap (A \cup C)$ |分配律|
+| $\overline{A \cap B}=\overline{A} \cup \overline{B}$ <br> $\overline{A \cup B}=\overline{A} \cap \overline{B}$ |德·摩根律|
+| $A\cup (A \cap B)=A$ <br> $A\cap (A \cup B)=A$ |吸收律|
+| $A \cup overline{A}=U$ <br> $A \cap overline{A}=\emptyset$ |互补律|
+| $A-B=A\cap \overline{B}$ ||
 
 ### 证明集合恒等式的方法
 - [ ] 证明两个集合相等：证明两个集合互为对方的子集。
@@ -1665,3 +1706,27 @@ $$∀x∀y(x≠y→f(x)≠f(y))$$
 > > 若定义域限制为 $Z^+$ ，函数f就是一对一的。
 - [x] 判断函数f(x)=x+1是否为一对一的。
 > 函数f(x)=x+1是一对一的。因在x≠y时x+1≠y+1。
+
+#### 函数为一对一的条件
+- [x] 定义域和伴域都是实数集合子集的函数f称为严格递增的（strictly increasing），如果对f定义域中的x和y，只要x<y就有f(x)<f(y)。类似的，f称为严格递减的（strictly decreasing），如果对f定义域中的x和y，只要x<y就有f(x)>f(y)。
+	> 严格递增：∀x∀y(x<y→f(x)<f(y))
+	> 严格递减：∀x∀y(x<y→f(x)>f(y))
+	> 论域为f的定义域
+- [x] 只要函数是严格递增的或严格递减的，它必定是一对一的。
+
+### 映上函数
+- [x] 从A到B的函数f称为映上的（onto）或满射的（surjective），当且仅当对每个b∈B，有元素a∈A使得f(a)=b。如果函数f是映上的，则称它为映上函数或满射函数（surjection）。
+	> 映上函数：∀y∃x(f(x)=y)，其中x的论域是函数的定义域，y的论域是函数的伴域；
+	> 函数的值域和伴域相等；
+> 例：判断从{a,b,c,d}到{1,2,3}的函数是否映上的，f的定义是f(a)=3，f(b)=2，f(c)=1而f(d)=3。
+
+#### 映上函数的例子
+> 例：从整数集到整数集的函数 是映上的吗？
+> > 解：f不是映上的，比如说没有x使 。
+> 例：从整数集到整数集的函数f(x)=x+1是映上的吗？
+> > 解：这个函数是映上的，因为对每个整数y，都有一个整数x使f(x)=y。 f(x)=y的充要条件是x+1=y,而这只要令x=y-1就成立。
+
+### 一一对应函数
+- [x] 若函数f既是一对一的，又是映上的，就说它是一一对应（one-to-one correspondence）或双射的（bijection）。
+	> 假定f是从集合A到它自身的函数。如果A是有限的，那么f是一对一的当且仅当它是映上的。
+	> 当A为无限集时，这一结论不一定成立。 
