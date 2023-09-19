@@ -1755,6 +1755,6 @@ $$∀x∀y(x≠y→f(x)≠f(y))$$
 	> 当A为无限集时，这一结论不一定成立。 
 
 <p align="center">
-	 <img src="./img/一一对应函数例子.png" alt="一一对应函数例子">
+	 <img src="./img/一一对应函数例子.jpg" alt="一一对应函数例子">
 	 <p align="center"><span>一一对应函数例子</span></p>
 </p>
