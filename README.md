@@ -1481,16 +1481,16 @@ $$((p∨q)∧(┑p∨r))→(q∨r)$$
 - [x] a是集合A的一个元素：a∈A。
 - [x] a不是集合A的一个元素：a∉A 。
 - [x] 空集（empty set, null set）：不含任何元素的特殊集合，用∅表示
-	> {x|x>x2, x∈Z+}是一个空集
- 	> 
-	> ∅和{∅}不一样，是两个集合
+	> $\lbrace x|x>x^2, x∈Z^+\rbrace$ 是一个空集
+ 	> ∅和{∅}不一样，是两个集合
 - [x] 单元集（singleton set）：只含有一个元素的集合
 - [x] 集合A是集合B的子集（subset）当且仅当A的每个元素也是B的元素，用A⊆B表示A是B的子集。
 	> A⊆B当且仅当量化语句∀x(x∈A→x∈B)为真。
 - [x] 定理：对于任意集合S，(i) ∅⊆S和(ii) S⊆S。
-      	> 证明：(i)写为逻辑表达式∀x(x∈∅→x∈S),由于x∈∅为F，所以该式一定为重言式
-      	>
-      	> (ii) 写为逻辑表达式∀x(x∈S→x∈S)，该式子也一定为重言式
+	> 证明：(i)写为逻辑表达式∀x(x∈∅→x∈S),由于x∈∅为F，所以该式一定为重言式
+ 	>
+ 	> (ii) 写为逻辑表达式∀x(x∈S→x∈S)，该式子也一定为重言式
+ 	
 - [x] 真子集（proper subset）：A是B的子集，但A≠B。
 	> 证明两个集合相等的一个有效的方法就是证明它们互为另一个的子集，即如果A⊆B且B⊆A，则A=B；
 	> 
@@ -1562,7 +1562,7 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 ## 2.2 集合运算
 ### 并集
 - [x] 令A和B为集合。A和B的并集（union）用A∪B表示，这是在A或B中或同时在A和B中的元素组成的集合。
-      $$A \cup B=\llbrace x|x∈A ∨ x∈B\rbrace$$
+      $$A \cup B=\lbrace x|x∈A ∨ x∈B\rbrace$$
 
 <p align="center">
 	 <img src="./img/并集文氏图.png" alt="并集文氏图">
@@ -1605,7 +1605,7 @@ $$A-B=\lbrace x|x∈A ∧ x∉B\rbrace$$
 
 > 例：A= {1,3,5},B={1,2,3} ，A∩B= {1,3} ，A-B = {5}，B-A = {2}
 ### 补集
-令U为全集。集合A的补集（complement）用 $\overline{A}$表示，这是A对于U的补集，即U-A。
+令U为全集。集合A的补集（complement）用 $\bar A$ 表示，这是A对于U的补集，即U-A。
 $$\overline{A}=\lbrace x|x∉A\rbrace$$
 
 <p align="center">
@@ -1618,28 +1618,45 @@ $$\overline{A}=\lbrace x|x∉A\rbrace$$
 
 |恒等式|名称|
 |----|----|
-| $A\cap U=A$ <br> $A\cup \emptyset=A$ |恒等律|
-| $A\cup U=U$ <br> $A\cup \emptyset=\emptyset$ |支配率|
-| $A\cap A=A$ <br> $A\cup A=At$ |幂等律|
-| $overline{(overline{A})}=A$ |补律|
+| $A\cap U=A$ <br> $A\cup \varnothing=A$ |恒等律|
+| $A\cup U=U$ <br> $A\cup \varnothing=\varnothing$ |支配率|
+| $A\cap A=A$ <br> $A\cup A=A$ |幂等律|
+| $\overline{(\bar{A})}=A$ |补律|
 | $A\cap B=B \cap A$ <br> $A\cup B=B\cup A$ |交换律|
 | $A \cup (B\cup C)=(A \cup B)\cup C$ <br> $A \cap (B\cap C)=(A \cap B)\cap C$ |结合律|
 | $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$ <br> $A \cup (B \cap C)=(A \cup B)\cap (A \cup C)$ |分配律|
-| $\overline{A \cap B}=\overline{A} \cup \overline{B}$ <br> $\overline{A \cup B}=\overline{A} \cap \overline{B}$ |德·摩根律|
+| $\overline{A \cap B}=\bar{A} \cup \bar{B}$ <br> $\overline{A \cup B}=\bar{A} \cap \bar{B}$ |德·摩根律|
 | $A\cup (A \cap B)=A$ <br> $A\cap (A \cup B)=A$ |吸收律|
-| $A \cup overline{A}=U$ <br> $A \cap overline{A}=\emptyset$ |互补律|
-| $A-B=A\cap \overline{B}$ ||
+| $A \cup \bar{A}=U$ <br> $A \cap \bar{A}=\varnothing$ |互补律|
+| $A-B=A\cap \bar{B}$ ||
 
 ### 证明集合恒等式的方法
 - [ ] 证明两个集合相等：证明两个集合互为对方的子集。
 - [ ] 证明两个集合相等：使用集合构造符和推理。
+> 例如：证明 $\overline{A \cap B}=\bar{A} \cup \bar{B}$
+> > 证明：对于 $x \in \overline{A \cap B}$ ，有 $x \notin A \cap B$ = $\neg (x \in A ∧ x \in B)$
+> >
+> > = $\neg (x \in A) ∨ \neg (x \in B)$ = $x \notin A ∨ x \notin B$ = $x \in \bar A ∨ x \in \bar B$ 
+> >
+> > = $\bar A \cup \bar B$ (该证明加上{x|}即集合构造符即可)
 - [ ] 要证明涉及两个以上集合的集合恒等，可以证明恒等式的每一边是另一边的子集。
 - [ ] 使用成员表来证明集合恒等式：用1表示元素属于一个集合，0表示元素不属于一个集合。
+> 例如：可以用成员表证明 $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$
 - [ ] 使用已经证明的集合恒等式来证明其它集合恒等式。
+> 例如：证明 $\overline{A \cup (B \cup C)}=(\bar C \cup \bar B)\cap \bar A$
+> > 证明：$\overline{A \cup (B \cup C)}=\bar A \cap \overline{B \cap C}$
+> >
+> > $=\bar A \cap (\bar B \cup \bar C}$ (再利用交换律即可)
 
 ### 扩展的并集和交集
 - [x] 一组集合的并集是包含那些至少是这组集合中一个集合成员的元素的集合。
 - [x] 一组集合的交集是包含那些属于这组集合中所有集合成员的元素的集合。
+
+<p align="center">
+	 <img src="./img/扩展文氏图.png" alt="扩展的并集和交集文氏图">
+	 <p align="center"><span>扩展的并集和交集文氏图</span></p>
+</p>
+
 > 例：令A={0,2,4,6,8}，B={0,1,2,3,4}，C={0,3,6,9}。A∪B∪C和A∩B∩C 是什么集合？
 >
 > A∪B∪C包括那些至少属于A，B，C之一的元素，则：A∪B∪C={0,1,2,3,4,6,8,9}
@@ -1647,8 +1664,8 @@ $$\overline{A}=\lbrace x|x∉A\rbrace$$
 > A∩B∩C包含那些属于全部三个集合的元素，则：A∩B∩C={0}
 
 > 例：令 $A_i=\lbrace i,i+1,i+2,...\rbrace$ ，那么有
-> $\Cup\limits_{i=1}^n A_i=\Cup\limits_{i=1}^n \lbrace i,i+1,i+2,...\rbrace=\lbrace 1,2,3,...\rbrace$
-> $\Cap\limits_{i=1}^n A_i=\Cap\limits_{i=1}^n \lbrace i,i+1,i+2,...\rbrace=\lbrace n,n+1,n+2,...\rbrace$
+> $\bigcup\limits_{i=1}^n A_i=\bigcup\limits_{i=1}^n \lbrace i,i+1,i+2,...\rbrace=\lbrace 1,2,3,...\rbrace$
+> $\bigcap\limits_{i=1}^n A_i=\bigcap\limits_{i=1}^n \lbrace i,i+1,i+2,...\rbrace=\lbrace n,n+1,n+2,...\rbrace$
 
 ### 计算机表示集合的方法
 - [x] 假定全集U的元素个数n是有限的，且大小合适；
@@ -1674,6 +1691,12 @@ $$\overline{A}=\lbrace x|x∉A\rbrace$$
 	- [ ] 如果f是A到B的函数，就写成f:A→B；
  	- [ ] 函数f:A→B有时定义为从A到B的关系；
 - [x] 如果f是从A到B的函数，就说A是f的定义域（domain），而B是f的伴域（codomain）。如果f(a)=b，就说b是a的像（image）而a是b的原像（preimage）。A中元素的所有像元素的集合称为f的值域（range）。有时也说f把A映射（mapping）到B。
+
+<p align="center">
+	 <img src="./img/函数的例子.png" alt="函数的例子">
+	 <p align="center"><span>函数的例子</span></p>
+</p>
+
 > 例：令f为从Z到Z的函数，它指派给每个整数的是该整数的平方。于是 $f(x)=x^2$ ，而f的定义域是所有整数的集合，f
 的伴域可以从所有整数集合中选择，f的值域是所有非负整数中那些完全平方的集合，即{0,1,4,9……}
 
@@ -1730,3 +1753,8 @@ $$∀x∀y(x≠y→f(x)≠f(y))$$
 - [x] 若函数f既是一对一的，又是映上的，就说它是一一对应（one-to-one correspondence）或双射的（bijection）。
 	> 假定f是从集合A到它自身的函数。如果A是有限的，那么f是一对一的当且仅当它是映上的。
 	> 当A为无限集时，这一结论不一定成立。 
+
+<p align="center">
+	 <img src="./img/一一对应函数例子.png" alt="一一对应函数例子">
+	 <p align="center"><span>一一对应函数例子</span></p>
+</p>
