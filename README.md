@@ -1648,7 +1648,7 @@ $$\overline{A}=\lbrace x|x∉A\rbrace$$
 > > = $\bar A \cup \bar B$ (该证明加上{x|}即集合构造符即可)
 - [ ] 要证明涉及两个以上集合的集合恒等，可以证明恒等式的每一边是另一边的子集。
 - [ ] 使用成员表来证明集合恒等式：用1表示元素属于一个集合，0表示元素不属于一个集合。
-> 例如：可以用成员表证明 $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$
+> 例如：可以用成员表证明 $A \cap (B \cup C)=(A \cap B)\cup (A \cap C)$ (成员表格式就是x属于A，x属于B，x属于C，列举真值，然后判断x分别在两个集合中的真值)
 - [ ] 使用已经证明的集合恒等式来证明其它集合恒等式。
 > 例如：证明 $\overline{A \cup (B \cup C)}=(\bar C \cup \bar B)\cap \bar A$
 > > 证明： $\overline{A \cup (B \cup C)}=\bar A \cap \overline{B \cap C}$
