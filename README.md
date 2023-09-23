@@ -1606,6 +1606,7 @@ $$A-B=\lbrace x|x∈A ∧ x∉B\rbrace$$
 > 例：A= {1,3,5},B={1,2,3} ，A∩B= {1,3} ，A-B = {5}，B-A = {2}
 ### 补集
 令U为全集。集合A的补集（complement）用 $\bar A$ 表示，这是A对于U的补集，即U-A。
+
 $$\overline{A}=\lbrace x|x∉A\rbrace$$
 
 <p align="center">
