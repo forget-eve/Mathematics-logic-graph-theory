@@ -1562,7 +1562,8 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 ## 2.2 集合运算
 ### 并集
 - [x] 令A和B为集合。A和B的并集（union）用A∪B表示，这是在A或B中或同时在A和B中的元素组成的集合。
-      $$A \cup B=\lbrace x|x∈A ∨ x∈B\rbrace$$
+
+ $$A \cup B=\lbrace x|x∈A ∨ x∈B\rbrace$$
 
 <p align="center">
 	 <img src="./img/并集文氏图.png" alt="并集文氏图">
@@ -1573,7 +1574,9 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 
 ### 交集
 - [x] 令A和B为集合。A和B的交集(intersection)用A∩B表示，这是既在A中又在B中的元素组成的集合。
-      $$A \cap B=\lbrace x|x∈A ∧ x∈B\rbrace$$
+
+$$A \cap B=\lbrace x|x∈A ∧ x∈B\rbrace$$
+
 - [x] 如果两个集合的交集为空集，就说它们不相交(disjoint)
 
 <p align="center">
@@ -1587,6 +1590,7 @@ $$A_1×A_2×…×A_n =\lbrace(a_1,a_2,…,a_n) | a_i∈A_i, i=1,2,…,n\rbrace$$
 
 #### 容斥原理
 - [x] 容斥原理（principle of inclusion-exclusion）：计算集合并集的基数
+
 $$|A \cup B|=|A|+|B|-|A \cap B|$$
 
 <p align="center">
@@ -1596,6 +1600,7 @@ $$|A \cup B|=|A|+|B|-|A \cap B|$$
 
 ### 差集
 - [x] 令A和B为集合。A和B的差集（difference）用A-B表示，这是只属于A而不属于B的所有元素组成的集合。A和B的差集也称为B对于A的补集。
+
 $$A-B=\lbrace x|x∈A ∧ x∉B\rbrace$$
 
 <p align="center">
