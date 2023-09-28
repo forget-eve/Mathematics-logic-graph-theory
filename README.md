@@ -2315,26 +2315,18 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 ### 集合的关系
 - [x] 集合A的关系是从A到A的关系，即A×A的子集。
 	> 任一 $A$ 到 $B$ 上的关系 $R$ ，即 $R \subseteq A×B$ ，而 $A×B \subseteq (A \cup B)×(A \cup B)$ ，所以关系 $R$ 总可以看成是 $A \cup B$ 上的关系，它与原关系 $R$ 具有完全相同的序偶，很多时候对它的讨论代替对 $R$ 的讨论无损于问题的本质
-设A是集合{1,2,3,4}，A上的关系R={(a,b)|a整除
-b}。
+> 例：设A是集合{1,2,3,4}，A上的关系R={(a,b)|a整除b}。
 
 ### 关系的性质
- 如果对每个元素aA有(a,a)R，那么集
-合A上的关系R叫做自反的（reflexive）。
- aA((a,a)R)
- 对于a,bA，如果只要(a,b)R就有
-(b,a)R，则集合A上的关系R叫做对称的
-（symmetric）。如果对a,bA，仅当a=b时
-(a,b)R和(b,a)R，则集合A上的关系R叫做反对称
-的（antisymmetric）。
- 反对称关系：aAbA(((a,b)R∧(b,a)R)(a=b))
- 对称和反对称的概念不是对立的
-如果对于a,b,cA，只要(a,b)R并且
-(b,c)R就有(a,c)R，则集合A上的关系R叫做传递的
-（transitive）。
- 传递关系：
-aAbAcA(((a,b)R∧(b,c)R)(a,c)R)
-n元素集合上有多少个自反的关系？
+- [x] 如果对每个元素aA有(a,a)R，那么集合A上的关系R叫做 ***自反的*** （reflexive）。
+	> $∀a \in A((a,a) \in R)
+- [x] 对于 $a,b \in A$ ，如果只要 $(a,b) \in R$ 就有 $(b,a) \in R$ ，则集合A上的关系R叫做 ***对称的*** （symmetric）。如果对 $a,b \in A$ ，仅当a=b时 $(a,b) \in R$ 和 $(b,a) \in R$ ，则集合A上的关系R叫做 ***反对称的*** （antisymmetric）。
+	> 反对称关系： $∀a \in A ∀b \in A(((a,b) \in R∧(b,a) \in R)→(a=b))
+	> 
+	> 对称和反对称的概念不是对立的
+- [x] 如果对于 $a,b,c \in A$ ，只要 $(a,b) \in R$ 并且 $(b,c) \in R$ 就有 $(a,c) \in R$ ，则集合A上的关系R叫做传递的（transitive）。
+	> 传递关系： $∀a \in A ∀b \in A ∀c \in A(((a,b) \in R∧(b,c) \in R)→(a,c) \in R)$
+> 例：n元素集合上有多少个自反的关系？
 
 ## 5.2 n元关系及其应用
 ## 5.3 关系的表示
