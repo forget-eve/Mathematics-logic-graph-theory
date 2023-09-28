@@ -2220,7 +2220,7 @@ $$C_n=C_0C_{n-1}+C_1C_{n-2}+...+C_{n-2}C_1+C_{n-1}C_0=\sum\limits_{k=0}^{n-1}C_k
 > - [x] $|A_1 \cup A_2|=|A_1|+|A_2|-|A_1 \cap A_2|$
 
 > 例：有多少个不超过1000的正整数可以被7或11整除？
-> > $|A \cup B|=|a|+|B|-|A \cap B|$ = $\lfloor \frac{1000}{7}\rfloor +\lfloor \frac{1000}{11}\rfloor -\lfloor \frac{1000}{11·7}\rfloor $ = $142+90-12$ = $220$
+> > $|A \cup B|=|a|+|B|-|A \cap B|$ = $\lfloor \frac{1000}{7}\rfloor +\lfloor \frac{1000}{11}\rfloor -\lfloor \frac{1000}{11·7}\rfloor$ = $142+90-12$ = $220$
 
 ### 三个集合并集的元素个数
 
