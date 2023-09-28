@@ -2286,7 +2286,7 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 # 第五章 关系
 ## 5.1 关系及其性质
 ### 定义
-- [x] 设A和B是集合，一个从A到B的二元关系（binary relation）是A×B的子集，即一个有序对的集合R。使用记号 $aRb$ 表示 $(a,b) \in R$ ， R上用斜线划去表示 $(a,b) \notin R$ 。当 $(a,b) \in R$ 时称a与b有关系R。
+- [x] 设A和B是集合，一个从A到B的二元关系（binary relation）是A×B的子集，即一个有序对的集合R。使用记号 $aRb$ 表示 $(a,b) \in R$ ， $a \cancel{R} b$ 表示 $(a,b) \notin R$ 。当 $(a,b) \in R$ 时称a与b有关系R。
 > 例：设A是所有城市的集合，B是中国所有省的集合，定义如下关系R：如果城市a在省b，则(a,b)R，例如(合肥，安徽)，(南京，江苏)，(洛阳，河南)等。
 >
 > 父子关系、兄弟关系、姐妹关系。
@@ -2318,10 +2318,10 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 > 例：设A是集合{1,2,3,4}，A上的关系R={(a,b)|a整除b}。
 
 ### 关系的性质
-- [x] 如果对每个元素aA有(a,a)R，那么集合A上的关系R叫做 ***自反的*** （reflexive）。
-	> $∀a \in A((a,a) \in R)
+- [x] 如果对每个元素 $a \in A$ 有 $(a,a) \in R$ ，那么集合A上的关系R叫做 ***自反的*** （reflexive）。
+	> $∀a \in A((a,a) \in R)$
 - [x] 对于 $a,b \in A$ ，如果只要 $(a,b) \in R$ 就有 $(b,a) \in R$ ，则集合A上的关系R叫做 ***对称的*** （symmetric）。如果对 $a,b \in A$ ，仅当a=b时 $(a,b) \in R$ 和 $(b,a) \in R$ ，则集合A上的关系R叫做 ***反对称的*** （antisymmetric）。
-	> 反对称关系： $∀a \in A ∀b \in A(((a,b) \in R∧(b,a) \in R)→(a=b))
+	> 反对称关系： $∀a \in A ∀b \in A(((a,b) \in R∧(b,a) \in R)→(a=b))$
 	> 
 	> 对称和反对称的概念不是对立的
 - [x] 如果对于 $a,b,c \in A$ ，只要 $(a,b) \in R$ 并且 $(b,c) \in R$ 就有 $(a,c) \in R$ ，则集合A上的关系R叫做传递的（transitive）。
