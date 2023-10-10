@@ -2347,7 +2347,7 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 
 > 例：{(1,3),(1,4),(2,3),(2,4),(3,4)}
 - [x] 对于 $a,b \in A$ ，如果只要 $(a,b) \in R$ 就有 $(b,a) \notin R$ ，则集合A上的关系R叫做 ***非对称的*** 
-> $∀a \in A∀b \in A((a,b) \in R → (b,a) \notin R)$
+	> $∀a \in A∀b \in A((a,b) \in R → (b,a) \notin R)$
 
 > ***由于对非对称而言，a=b时，则(a,b)一定不在R中，但是a=b时，(a,b)可以在R中*** 
 
@@ -2377,7 +2377,7 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 > > R◦R◦R=(R◦R)◦R={(1,2),(1,3),(1,4),(2,2),(2,3),(2,4)}
 
 > ***关系的合成有结合律***
-> $R \subseteq A×B,S \subseteq B×C,T \usbseteq C×D$
+> $R \subseteq A×B,S \subseteq B×C,T \subseteq C×D$
 > 
 > $(T◦S)◦R=T◦(S◦R)$
 > > 证明: $H=(T◦S)◦R,J=T◦(S◦R)$
@@ -2407,7 +2407,10 @@ $$R^1 =R, R^{n+1}=R^n◦R$$
 ### 传递关系的充要条件
 - [x] 集合A上的关系R是传递的，当且仅当对n=1,2,3, …, 有 $R^n \subseteq R$
 	> 充分条件只需要 $R^2 \subseteq R$
-> > 必要性 $∀(a,b) \in R (b,c) \in R →(a,b) \in R^2 \subseteq R→$
+> > 必要性，当 $R$ 是传递的，则 $∀(a,b) \in R , (b,c) \in R$ → $(a,b) \in R^2 \subseteq R$ (前一步为关系的幂定义，后一步为 $R$ 为传递的)→ $(a,c) \in R$ ，后续可以证明 $n>2$ 时也有 $R^n \subseteq R$
+> >
+> > 充分性，当 $∀(a,b) \in R^{k+1}=R^k=R$ → $∃x \in A,(a,x) \in R,(x,b) \in R^k \subseteq R$ (这一步是由于 $(a,b) \in R^{k+1}$ 则由 $R^{k+1}=R^k◦R$ ,肯定存在这样两个序列一个在 $R$ 中一个在 $R^k$ )→由于 $(a,b) \in R$ 所以证明了 $R$ 的传递性。
+
 > n=1,2,3, …, 有 $R^n \subseteq R ↔ R^2 \subseteq R ↔ 关系R是传递$
 
 ## 5.2 n元关系及其应用
@@ -2421,11 +2424,49 @@ $$R^1 =R, R^{n+1}=R^n◦R$$
 	> 主关键字（primary key）：可唯一确定整个n元组的域；
 	> 
 	> 复合关键字（composite key）：可唯一标识整个n元组的域的组合；
-### n元关系的运算
-- [x] 设R是n元关系，C是R中元素可能满足的一个条件。那么选择运算sC将n元关系映射到R中满足条件C的所有n元组构成的n元关系。
- 投影（projection）Pi1,i2, …,im将n元组
-(a1,a2 ,…,an)映射到m元组(ai1 ,ai2 ,…,aim )，其中m≤n。
+### n元关系的运算(详见数据库基础第二章)
+[详见数据库基础第二章](https://forget-eve.github.io/Database-Basics/#/?id=%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93)
+- [x] 设R是n元关系，C是R中元素可能满足的一个条件。那么选择运算 $S_C$ 将n元关系映射到R中满足条件C的所有n元组构成的n元关系。
+#### 投影(projection)
+- [x] $P_{i1,i2, …,im}$ 将n元组 $(a_1,a_2,…,a_n)$ 映射到m元组 $(a_{i1},a_{i2},…,a_{im})$ ，其中 $m≤n$ 。
+#### 连接
+- [x] 设R是m元关系且S是n元关系，其中p≤m和p≤n。连接 $J_p(R,S)$ 是m+n-p元关系，它包含了所有的(m+n-p)元组 $(a_1,a_2,…,a_{m-p},c_1,c_2,…,c_p,b_1,b_2,…,b_{n-p})$ ，其中m元组 $(a_1,a_2, …,a_{m-p},c_1,c_2,…,c_p)$ 属于R且n元组 $(c_1,c_2,…,c_p,b_1,b_2,…,b_{n-p})$ 属于S。
+
 ## 5.3 关系的表示
+- [x] 用矩阵表示关系
+> 0-1矩阵表示有穷集之间的关系
+>
+> 假设R是从 $A=\lbrace a_1,a_2,…,a_m\rbrace$ 到 $B=\lbrace b_1,b_2,…,b_n \rbrace$ 的关系，关系R可以用矩阵 $M_R=[m_{ij}]$ 来表示
+
+$$
+m_{ij}=
+\begin{cases}
+1 &\text{if } (a_i,b_j) \in R \\
+0 &\text{if } (a_i,b_j) \notin R
+\end{cases}
+$$
+
+> 例： $A={a_1,a_2,a_3},B={b_1,b_2,b_3,b_4,b_5}$
+>
+> $R={(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_4),(a_3,b_1),(a_3,b_3),(a_3,b_5)}$
+
+$$
+M_R=\left[
+\begin{matrix}
+0 \ 1 \ 0 \ 0 \ 0 \\
+1 \ 0 \ 1 \ 1 \ 0 \\
+1 \ 0 \ 1 \ 0 \ 1
+\end{matrix}
+\right]
+$$
+
+### 矩阵表示的应用
+- [x] R是自反的： $M_R$ 的主对角线的所有元素都等于1；
+- [x] R是对称的： $M_R$ 是对称矩阵；
+- [x] R是反对称的： $i≠j$ 时， $m_{ij}=0$ 或 $m_{ji}=0$
+- [x] R是反自反的： $M_R$ 的主对角线的所有元素都等于0
+- [x] R是非对称的： $M_R$ 的主对角线的所有元素都等于0， $i≠j$ 时, $m_{ij}=0$ 或 $m_{ji}=0$ 
+
 ## 5.4 关系的闭包
 ## 5.5 等价关系基础
 ## 5.6 偏序
