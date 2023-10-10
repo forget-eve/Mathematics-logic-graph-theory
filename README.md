@@ -2425,7 +2425,7 @@ $$R^1 =R, R^{n+1}=R^n◦R$$
 	> 
 	> 复合关键字（composite key）：可唯一标识整个n元组的域的组合；
 ### n元关系的运算(详见数据库基础第二章)
-[详见数据库基础第二章](https://forget-eve.github.io/Database-Basics/#/?id=%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93)
+[详见数据库基础第二章](https://forget-eve.github.io/Database-Basics/#/?id=_22-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84)
 - [x] 设R是n元关系，C是R中元素可能满足的一个条件。那么选择运算 $S_C$ 将n元关系映射到R中满足条件C的所有n元组构成的n元关系。
 #### 投影(projection)
 - [x] $P_{i1,i2, …,im}$ 将n元组 $(a_1,a_2,…,a_n)$ 映射到m元组 $(a_{i1},a_{i2},…,a_{im})$ ，其中 $m≤n$ 。
