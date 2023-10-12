@@ -2446,7 +2446,7 @@ m_{ij}=
 \end{cases}
 $$
 
-> 例： $A= \lbrace a_1,a_2,a_3\rbrace ,B=\lbrace b_1,b_2,b_3,b_4,b_5} \rbrace$
+> 例： $A=\lbrace a_1,a_2,a_3 \rbrace , B=\lbrace b_1,b_2,b_3,b_4,b_5 \rbrace$
 > 
 > $R=\lbrace (a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_4),(a_3,b_1),(a_3,b_3),(a_3,b_5) \rbrace$
 
@@ -2485,7 +2485,9 @@ M_{R_1}=\left[
 1 & 0 & 0
 \end{matrix}
 \right]
-\newline
+$$
+
+$$
 M_{R_1 \cup R_2}=M_{R_1 ∨ M_{R_2}}=\left[
 \begin{matrix}
 1 & 0 & 1 \newline
@@ -2493,7 +2495,9 @@ M_{R_1 \cup R_2}=M_{R_1 ∨ M_{R_2}}=\left[
 1 & 1 & 0
 \end{matrix}
 \right]
-\newline
+$$
+
+$$
 M_{R_1 \cap R_2}=M_{R_1} ∧ M_{R_2}=\left[
 \begin{matrix}
 1 & 0 & 1 \newline
