@@ -2560,7 +2560,7 @@ $$R^{\*}=\bigcup\limits_{n=1}^{\infty} R^n$$
 #### 传递闭包的计算
 - [x] 定理：设 $M_R$ 是n元素集合上的关系R的0-1矩阵。那么传递闭包的0-1矩阵是
 
-$$M_R^{\*}=M_R \land M_R^{[2]} \land M_R^{[3]} \land \cdops \land M_R^{[n]}$$
+$$M_R^{\*}=M_R \land M_R^{[2]} \land M_R^{[3]} \land \cdots \land M_R^{[n]}$$
 
 $$M_R^{\*}= R \cup R^2 \cup R^3 \cup \cdots \cup R^n$$
 
