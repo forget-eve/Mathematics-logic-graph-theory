@@ -2508,10 +2508,43 @@ M_{R_1 \cap R_2}=M_{R_1} ∧ M_{R_2}=\left[
 $$
 
 ### 关系的合成和布尔积
+> 假设R是从A到B的关系，S是从B到C的关系，则
 
+$$M_{S·R}=M_R ⊙ M_S$$
+
+> 关系的幂： $M_R^{\*}=M_R^[n]$
+
+$$c_{ij}=(a_{i1} ∧ b_{1j})∨(a_{i2} ∧ b_{2j})∨ \cdots ∨(a_{ik} ∧ b_{kj})$$
+
+$$
+M_{R}=\left[
+\begin{matrix}
+1 & 0 & 1 \newline
+1 & 0 & 0 \newline
+0 & 0 & 0
+\end{matrix}
+\right]
+,M_{R_1}=\left[
+\begin{matrix}
+0 & 1 & 0 \newline
+0 & 1 & 1 \newline
+1 & 0 & 1
+\end{matrix}
+\right]
+$$
+
+$$
+M_{S·R}=M_R ⊙ M_S=\left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 1 \newline
+0 & 0 & 0
+\end{matrix}
+\right]
+$$
 
 ### 有向图
-- [x] 一个有向图（directed graph）有顶点（vertex，或结点 node）集V和边（edge，或弧arc）集E组成，其中边集是V中元素的有序对的集合。顶点a叫做边(a,b)的始点（initial vertex），顶点b叫做这条边的终点（terminal vertex）。形如(a,a)的边用一条从顶点a到自身的弧 表示，这种边叫做环（loop）。
+- [x] 一个 ***有向图*** (directed graph)有 ***顶点*** (vertex，或结点 node)集V和 ***边*** (edge，或弧arc)集E组成，其中边集是V中元素的有序对的集合。顶点a叫做边(a,b)的 ***始点*** (initial vertex)，顶点b叫做这条边的 ***终点*** (terminal vertex)。形如(a,a)的边用一条从顶点a到自身的弧 表示，这种边叫做 ***环*** (loop)。
 
 #### 有向图表示关系的例子
 - [x] 把一个有穷集上的关系看作一个有向图：集合的每个元素表示成一个点，每个有序对表示成一条边
@@ -2541,6 +2574,7 @@ $$
 	> 有向图的一条路径可以多次通过一个顶点；
 	>
 	> 有向图的一条边也可以多次出现在一条路径中
+
 ### 关系的路径
 - [x] 如果存在一个元素序列 $a,x_1,…,x_{n-1}$ ,b具有 $(a,x_1) \in R$ ,  $(x_1,x_2) \in R, … ,(x_{n-1},b) \in R$ ，那么在R中存在一条从a到b的路径。
 - [x] 定理:设R是集合A上的关系，从a到b存在一条长为正整数n的路径，当且仅当 $(a,b) \in R^n$
@@ -2564,6 +2598,83 @@ $$M_R^{\*}=M_R \land M_R^{[2]} \land M_R^{[3]} \land \cdots \land M_R^{[n]}$$
 
 $$M_R^{\*}= R \cup R^2 \cup R^3 \cup \cdots \cup R^n$$
 
+```算法1
+procedure transitive closure(MR:n×n的0-1矩阵)
+A:=MR
+B:=A
+for i:=2 to n
+begin
+	A:=A⊙MR
+	B:=B∨A
+end{B是关于R*的0-1矩阵}
+```
+
+> 上述算法的时间复杂度 $O(n^4)$ 
+
+##### 传递闭包计算的例子
+> 例：
+
+$$
+M_R=\left[
+\begin{matrix}
+1 & 0 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 0 
+\end{matrix}
+\right]
+,M_R*=M_R ∨ M_R^{[2]} ∨ M_R^{[3]}
+$$
+
+> 解：
+
+$$
+M_R^{[2]}=\left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 1 
+\end{matrix}
+\right]
+和 M_R^{[3]}=\left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 1 
+\end{matrix}
+\right]
+$$
+
+$$
+M_R^{\*}=\left[
+\begin{matrix}
+1 & 0 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 0 
+\end{matrix}
+\right]
+∨ \left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 1 
+\end{matrix}
+\right]
+∨ \left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 1 
+\end{matrix}
+\right]
+= \left[
+\begin{matrix}
+1 & 1 & 1 \newline
+0 & 1 & 0 \newline
+1 & 1 & 1 
+\end{matrix}
+\right]
+$$
+
 #### 沃舍尔算法
 - [x] 假设R是n元素集合上的关系，设 $v_1,v_2, …,v_n$ 是这n个元素的任意排列；
 - [x] 一条路径的内点是除了第一和最后一个顶点之外出现在路径中的所有顶点。
@@ -2571,9 +2682,32 @@ $$M_R^{\*}= R \cup R^2 \cup R^3 \cup \cdots \cup R^n$$
 	> 如果存在一条从 $v_i$ 到 $v_j$ 的路径使得这条路径的所有内点都在集合 $\lbrace v_1,v_2, …,v_k\rbrace$ 之中，那么 $w_{ij}^{[k]}=1$ ，否则为0；
 	>
 	>  $W_n=M_R^*$
+
+> 例： $v_1=a,v_2=b,v_3=c,且v_4=d$
+
+<p align="center">
+	 <img src="./img/沃舍尔算法.png" alt="解答">
+	 <p align="center"><span>解答</span></p>
+</p>
+
 - [x] 引理：设 $W_k=[w_{ij}^{[k]}]$ 是0-1矩阵，它在(i,j)位置为1，当且仅当存在一条从 $v_i$ 到 $v_j$ 的路径，其内点取自集合 $\lbrace v_1,v_2, …,v_k\rbrace$ ，那么
 
 $$w_{ij}^{[k]}=w_{ij}^{[k-1]} ∨ (w_{ik}^{[k-1]} ∧ w_{kj}^{[k-1]})$$
+
+```算法2 沃舍尔算法
+procedure Warshall(MR:n×n的0-1矩阵)
+W:=MR
+for k:=1 to n
+begin
+	for i:=1 to n
+	begin
+		for j:= 1 to n
+		wij:=wij∨(wik∧wkj)
+	end
+end{W=[wij]是MR*}
+```
+
+> 时间复杂度为 $O(n^3)$
 
 ## 5.5 等价关系基础
 - [x] 集合A上的关系叫做 ***等价关系*** (equivalence relation)，如果它是自反的、对称的和传递的。两个由等价关系联系起来的元素叫做 ***等价的元素*** 。
