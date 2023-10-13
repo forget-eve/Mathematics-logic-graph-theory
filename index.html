@@ -26,10 +26,16 @@
     <!-- MathJax 配置 -->
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
+        extensions: ["cancel.js"], // 加载取消线扩展
+        jax: ["input/TeX", "output/HTML-CSS"],
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ], // 行内公式标记
           displayMath: [ ['$$','$$'], ["\\[","\\]"] ], // 多行公式标记
           processEscapes: true, // 允许使用反斜杠转义
+        },
+        "HTML-CSS": {
+          availableFonts: ["TeX"], // 使用TeX字体
+          imageFont: null,
         }
       });
     </script>
