@@ -2516,6 +2516,8 @@ $$M_{S·R}=M_R ⊙ M_S$$
 
 $$c_{ij}=(a_{i1} ∧ b_{1j})∨(a_{i2} ∧ b_{2j})∨ \cdots ∨(a_{ik} ∧ b_{kj})$$
 
+> 可以理解为 $c_{ij}=1$ 当且仅当 $∃ k$ 使得 $a_{ik}=b_{kj}=1$
+
 $$
 M_{R}=\left[
 \begin{matrix}
