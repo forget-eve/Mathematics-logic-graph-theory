@@ -2924,7 +2924,18 @@ $$
 - [x] 哈塞图(Hasse diagram)：从关系的有向图开始，首先移走每个顶点的环（自反性）；再移走由于传递性出现的边(传递性)；最后，排列每条边使得它的起点在终点下面，并移走所有有向边上的箭头（反对称性）。
 	> 哈塞图和偏序有一一对应的关系
 
-
+<p align="center">
+	 <img src="./img/哈赛图1.png" alt="哈赛图1">
+	 <p align="center"><span>构造关于({1,2,3,4},≤)的哈赛图</span></p>
+</p>
+<p align="center">
+	 <img src="./img/哈赛图2.png" alt="哈赛图2">
+	 <p align="center"><span>构造关于({1,2,3,4,6,8,12},|)的哈赛图</span></p>
+</p>
+<p align="center">
+	 <img src="./img/哈赛图3.png" alt="哈赛图3">
+	 <p align="center"><span>(P({a,b,c}),子集)</span></p>
+</p>
 
 
 
