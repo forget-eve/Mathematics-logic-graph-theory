@@ -4027,23 +4027,23 @@ else if label(v)≠x then 用x标记 new veriex
 	>
 	> (D) $(∀xF(x)∀∃yG(y))∧(-∃yG(y))→ VxF(x)$
 - (b) 设A,B,C,D是任意集合，则以下选项正确的是()
-> (A) $(A×B)\cup (B×D)=(A \cup B)×(C \cup D)$
->
-> (B) $(A-B)×C=(A×C)-(B×C)$
->
-> (C) $\overline{A-B} = \overline{B-A}$
->
-> (D) $若P(A) \subseteq P(B),则A \subesteq B$
+	> (A) $(A×B)\cup (B×D)=(A \cup B)×(C \cup D)$
+	>
+	> (B) $(A-B)×C=(A×C)-(B×C)$
+	>
+	> (C) $\overline{A-B} = \overline{B-A}$
+	>
+	> (D) $若P(A) \subseteq P(B),则A \subseteq B$
 - (c) 设R,S,T是非空集合A上的非空二元关系，则以下说法正确的是(ABC)
-> (A) $R◦(S \cup T)=(R◦S) \cup (R◦T)$
->
-> (B) $R◦(S \cap T) \subseteq (R◦S) \cap (R◦T)$
->
-> (C) 若 $R_1$ 和 $R_2$ 是自反的，则 $R_2◦R_1$ 也是自反的。
->
-> (D) 若 $R_1$ 和 $R_2$ 是对称的，则 $R_2◦R_1$ 也是对称的。
+	> (A) $R◦(S \cup T)=(R◦S) \cup (R◦T)$
+	>
+	> (B) $R◦(S \cap T) \subseteq (R◦S) \cap (R◦T)$
+	>
+	> (C) 若 $R_1$ 和 $R_2$ 是自反的，则 $R_2◦R_1$ 也是自反的。
+	>
+	> (D) 若 $R_1$ 和 $R_2$ 是对称的，则 $R_2◦R_1$ 也是对称的。
 - (d) 以下序列可以作为包含5个顶点的简单图的顶点度数序列的是(AD)
-> (A)2,1,1,1,1 (B)3,3,2,2,1 (C)4,4,3,2,1 (D)4,4,3,3,2
+	> (A)2,1,1,1,1 (B)3,3,2,2,1 (C)4,4,3,2,1 (D)4,4,3,3,2
 
 ### T2
 - 2. (每题3分，共15分)填空题
