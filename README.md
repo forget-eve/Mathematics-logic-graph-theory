@@ -2612,7 +2612,7 @@ $$R^{\*}=\bigcup\limits_{n=1}^{\infty} R^n$$
 
 $$S^{\*}=\bigcup_{k=1}^{\infty} S^k$$
 
-	> 和 $S^k \subseteq S$ ，所以 $S^{\*} \subseteq S$ 。注意，如果 $R \subseteq S$ ，那么 $R^{\*} \subseteq S^{\*}$ ，因为任何在R中的路径也是S中路径。因此， $R^{\*} \subseteq S^{\*} \subseteq S$ 。于是，任何包含R的传递关系也一定包含 $R^{\*}$ 。因此， $R^{\*}$ 是R的传递闭包。
+> 和 $S^k \subseteq S$ ，所以 $S^{\*} \subseteq S$ 。注意，如果 $R \subseteq S$ ，那么 $R^{\*} \subseteq S^{\*}$ ，因为任何在R中的路径也是S中路径。因此， $R^{\*} \subseteq S^{\*} \subseteq S$ 。于是，任何包含R的传递关系也一定包含 $R^{\*}$ 。因此， $R^{\*}$ 是R的传递闭包。
 
 - [x] 引理：设A是n元素集合，R是A上的关系。如果R中存在一条从a到b的长至少为1的路径，那么存在一条长度不超过n的这种路径。此外，当a≠b时，如果在R中存在一条从a到b的路径，那么存在一条长度不超过n-1的路径。
 	> 证明：假设在R中存在从a到b的路径。令m是其中最短路径的长度。假设 $x_0,x_1,x_2,...x_{m-1},x_m$ 是一条这样的路径，其中 $x_0=a,x_m=b$ 。假设a=b且 $m>n$ ，可得 $m \geq n+1$ 。由鸽巢原理，因为A中有n个顶点，所以在 $x_0,x_1,x_2,...x_{m-1}$ 这m个顶点中，至少有两个是相同的。假设 $x_i=x_j,0 \leq i < j \leq m-1$ 。那么这条路径包含一条从 $x_i$ 到 $x_i$ 自身的回路。可以把这条回路从由a到b的路径中删除。因此，具有最短长度的路径的路径长度一定小于等于n。
@@ -4137,10 +4137,17 @@ else if label(v)≠x then 用x标记 new veriex
 
 $$A-(B-C)=(A-B) \cup (A \cap C)$$
 
-	> 证明: $A-(B-C)=A \cap \overline{B-C}$ ( $A-B=A \cap \overline{B}$ ) $=A \cap \overline{B \cap \overline{C}}$ (同上) $=A \cap (\overline{B} \cup C)$ ( $\overline{A \cap B}=\overline{A} \cup \overline{B}$ ) $=(A \cap \overline{B}) \cup (A \cap C)$ (分配律) $=(A-B) \cup (A \cap C)$ (同第一步)，得证。
+> 证明: $A-(B-C)=A \cap \overline{B-C}$ ( $A-B=A \cap \overline{B}$ ) $=A \cap \overline{B \cap \overline{C}}$ (同上) $=A \cap (\overline{B} \cup C)$ ( $\overline{A \cap B}=\overline{A} \cup \overline{B}$ ) $=(A \cap \overline{B}) \cup (A \cap C)$ (分配律) $=(A-B) \cup (A \cap C)$ (同第一步)，得证。
+
 ### T6
 6. (10分)设 $R$ 和 $S$ 是集合 $A$ 上的等价关系，证明: $R◦S$ 是 $A$ 上的等价关系当且仅当 $R◦S=S◦R$
-	> 证明:必要性，
+	> 证明():
+	>
+	> 必要性:  $R◦S$ 是 $A$ 上的等价关系推出 $R◦S=S◦R$ 。对于 $a,c \in A,(a,c) \in R◦S$ ，则一定存在 $b \in A$ ，使得 $(a,b) \in S,(b,c) \in R$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性， $(b,a) \in S,(c,b) \in R$ ，则可知 $(c,a) \in S◦R$ ，由于 $R◦S$ 是 $A$ 上的等价关系，那么 $(c,a) \in R◦S$ ，同理可推 $(a,c) \in S◦R$ ，所以可得 $R◦S \subseteq S◦R$ 。另一方面，对于 $a,c \in A,(a,c) \in S◦R$ ，则有一定存在 $b \in A$ ，使得 $(a,b) \in R,(b,c) \in S$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性， $(b,a) \in R,(c,b) \in S$ ，则可知 $(c,a) \in R◦S$ ，此时由于 $R◦S$ 是 $A$ 上的等价关系，那么 $(a,c) \in R◦S$ 则有 $S◦R \subseteq R◦S$ 。此时可得 $R◦S=S◦R$ 。
+	>
+	> 充分性： $R◦S=S◦R$ 推出 $R◦S$ 是 $A$ 上的等价关系。首先证明， $R◦S$ 是自反的，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，则对于任意 $a \in A$ ，都有 $(a,a) \in R,(a,a) \in S$ ，则由合成定义 $(a,a) \in R◦S$ ，故为自反的；然后证明， $R◦S$ 是对称的，对于 $(a,c) \in R◦S$ ，一定存在 $b \in A$ ，使得 $(a,b) \in S,(b,c) \in R$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性 $(b,a) \in S,(c,b) \in R$ ，则此时由合成定义 $(c,a) \in S◦R$ ，而由于 $R◦S=S◦R$ ，则 $(c,a) \in R◦S$ ，则可知为对称的；最后证明 $R◦S$ 是传递的，对于 $(a,c) \in R◦S,(c,e) \in R◦S$ ，由于 $R◦S=S◦R$ ，则 $(a,c) \in S◦R,(c,e) \in S◦R$ 则一定存在 $b,d \in A$ ，使得 $(a,b),(c,d) \in S,(b,c),(d,e) \in R$ ，
+
+> 此证明可得出证明集合等式的一个重要思想: _**证明两个集合互为对方的子集**_
 
 ### T7
 7. (10分)设 $f(n,k)$ 是从集合 $\lbrace 1,2,…,n\rbrace$ 中选出的不包含两个连续整数的 $k-$ 子集的个数( $k-$ 子集指包含 $k$ 个元素的子集， $k≥0$ )。
