@@ -2413,7 +2413,7 @@ $$R^1 =R, R^{n+1}=R^n◦R$$
 ### 传递关系的充要条件
 - [x] 集合A上的关系R是传递的，当且仅当对n=1,2,3, …, 有 $R^n \subseteq R$
 	> 充分条件只需要 $R^2 \subseteq R$
-> > 必要性，当 $R$ 是传递的，则 $∀(a,b) \in R , (b,c) \in R$ → $(a,b) \in R^2 \subseteq R$ (前一步为关系的幂定义，后一步为 $R$ 为传递的)→ $(a,c) \in R$ ，后续可以证明 $n>2$ 时也有 $R^n \subseteq R$
+> > 必要性，当 $R$ 是传递的，则 $∀(a,b) \in R , (b,c) \in R$ → $(a,c) \in R^2 \subseteq R$ (前一步为关系的幂定义，后一步为 $R$ 为传递的)→ $(a,c) \in R$ ，后续可以证明 $n>2$ 时也有 $R^n \subseteq R$
 > >
 > > 充分性，当 $∀(a,b) \in R^{k+1}=R^k=R$ → $∃x \in A,(a,x) \in R,(x,b) \in R^k \subseteq R$ (这一步是由于 $(a,b) \in R^{k+1}$ 则由 $R^{k+1}=R^k◦R$ ,肯定存在这样两个序列一个在 $R$ 中一个在 $R^k$ )→由于 $(a,b) \in R$ 所以证明了 $R$ 的传递性。
 
@@ -4145,7 +4145,7 @@ $$A-(B-C)=(A-B) \cup (A \cap C)$$
 	>
 	> 必要性:  $R◦S$ 是 $A$ 上的等价关系推出 $R◦S=S◦R$ 。对于 $a,c \in A,(a,c) \in R◦S$ ，则一定存在 $b \in A$ ，使得 $(a,b) \in S,(b,c) \in R$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性， $(b,a) \in S,(c,b) \in R$ ，则可知 $(c,a) \in S◦R$ ，由于 $R◦S$ 是 $A$ 上的等价关系，那么 $(c,a) \in R◦S$ ，同理可推 $(a,c) \in S◦R$ ，所以可得 $R◦S \subseteq S◦R$ 。另一方面，对于 $a,c \in A,(a,c) \in S◦R$ ，则有一定存在 $b \in A$ ，使得 $(a,b) \in R,(b,c) \in S$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性， $(b,a) \in R,(c,b) \in S$ ，则可知 $(c,a) \in R◦S$ ，此时由于 $R◦S$ 是 $A$ 上的等价关系，那么 $(a,c) \in R◦S$ 则有 $S◦R \subseteq R◦S$ 。此时可得 $R◦S=S◦R$ 。
 	>
-	> 充分性： $R◦S=S◦R$ 推出 $R◦S$ 是 $A$ 上的等价关系。首先证明， $R◦S$ 是自反的，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，则对于任意 $a \in A$ ，都有 $(a,a) \in R,(a,a) \in S$ ，则由合成定义 $(a,a) \in R◦S$ ，故为自反的；然后证明， $R◦S$ 是对称的，对于 $(a,c) \in R◦S$ ，一定存在 $b \in A$ ，使得 $(a,b) \in S,(b,c) \in R$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性 $(b,a) \in S,(c,b) \in R$ ，则此时由合成定义 $(c,a) \in S◦R$ ，而由于 $R◦S=S◦R$ ，则 $(c,a) \in R◦S$ ，则可知为对称的；最后证明 $R◦S$ 是传递的，对于 $(a,c) \in R◦S,(c,e) \in R◦S$ ，由于 $R◦S=S◦R$ ，则 $(a,c) \in S◦R,(c,e) \in S◦R$ 则一定存在 $b,d \in A$ ，使得 $(a,b),(c,d) \in S,(b,c),(d,e) \in R$ ，
+	> 充分性： $R◦S=S◦R$ 推出 $R◦S$ 是 $A$ 上的等价关系。首先证明， $R◦S$ 是自反的，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，则对于任意 $a \in A$ ，都有 $(a,a) \in R,(a,a) \in S$ ，则由合成定义 $(a,a) \in R◦S$ ，故为自反的；然后证明， $R◦S$ 是对称的，对于 $(a,c) \in R◦S$ ，一定存在 $b \in A$ ，使得 $(a,b) \in S,(b,c) \in R$ ，由于 $R$ 和 $S$ 是集合 $A$ 上的等价关系，那么由于对称性 $(b,a) \in S,(c,b) \in R$ ，则此时由合成定义 $(c,a) \in S◦R$ ，而由于 $R◦S=S◦R$ ，则 $(c,a) \in R◦S$ ，则可知为对称的；最后证明 $R◦S$ 是传递的，对于 $(a,b) \in R◦S,(b,c) \in R◦S$ ，由于 $R◦S=S◦R$ ，则 $(a,b) \in R◦S,(b,c) \in S◦R$ 则一定存在 $x,y \in A$ ，使得 $(a,x),(y,c) \in S,(x,b),(b,y) \in R$ ，则有由于 $R$ 为等价关系，由传递性有 $(x,y) \in R$ ，由关系的合成定义有 $(a,y) \in R◦S$ ，由于 $R◦S=S◦R$ ，则有 $(a,y) \in S◦R$ 。取 $m \in A$ ，有 $(a,m) \in R,(m,y) \in S$ ，由于 $S$ 为等价关系，则由传递性，有 $(m,c) \in S$ 。此时再由关系合成定义 $(a,c) \in S◦R$ ,由于 $R◦S=S◦R$ ，则有 $(a,c) \in R◦S$ 。故可知有传递性，此时可得 $R◦S$ 为 $A$ 上的等价关系。
 
 > 此证明可得出证明集合等式的一个重要思想: _**证明两个集合互为对方的子集**_
 
