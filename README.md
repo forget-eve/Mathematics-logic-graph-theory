@@ -4180,7 +4180,7 @@ $$A-(B-C)=(A-B) \cup (A \cap C)$$
 	> 综上所述，张先生，张太太的握手次数均为3。
 
 <p align="center">
-	 <img src="./img/T8.png" alt="T8题解">
+	 <img src="./img/T8.jpg" alt="T8题解">
 	 <p align="center"><span>T8题解</span></p>
 </p>
 
