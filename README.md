@@ -3237,7 +3237,7 @@ $$
 	> 有向图的邻接矩阵不一定是对称的；
 
 $$
-a_ij=
+a_{ij}=
 \begin{cases}
 1 , &\text{若} \lbrace v_i,v_j \rbrace 是G的一条边 \newline
 0 , &\text{否则}
@@ -3250,7 +3250,7 @@ $$
 - [x] 设G=(V,E)是无向图，设 $v_1,v_2,…,v_n$ 是顶点而 $e_1,e_2,…,e_m$ 是边，则相对于V和E的这个顺序的关联矩阵(incidence matrix)是n×m矩阵 $M=[m_{ij}]$ ，其中
 
 $$
-m_ij=
+m_{ij}=
 \begin{cases}
 1 , &\text{当边} e_j 关联 v_i 时 \newline
 0 , &\text{否则}
