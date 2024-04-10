@@ -2286,7 +2286,7 @@ $$其中有，1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +...+ (-1)^n \frac{
 # 第五章 关系
 ## 5.1 关系及其性质
 ### 定义
-- [x] 设A和B是集合，一个从A到B的二元关系（binary relation）是A×B的子集，即一个有序对的集合R。使用记号 $aRb$ 表示 $(a,b) \in R$ ， $a \cancel{R} b$ <span id="cancelR"></span> (R上有一个斜划线，若不能正常显示见[github原README](https://github.com/forget-eve/Mathematics-logic-graph-theory#cancelR))表示 $(a,b) \notin R$ 。当 $(a,b) \in R$ 时称a与b有关系R。
+- [x] 设A和B是集合，一个从A到B的二元关系（binary relation）是A×B的子集，即一个有序对的集合R。使用记号 $aRb$ 表示 $(a,b) \in R$ ， $a \not{R} b$ <span id="cancelR"></span> (R上有一个斜划线，若不能正常显示见[github原README](https://github.com/forget-eve/Mathematics-logic-graph-theory#cancelR))表示 $(a,b) \notin R$ 。当 $(a,b) \in R$ 时称a与b有关系R。
 > 例：设A是所有城市的集合，B是中国所有省的集合，定义如下关系R：如果城市a在省b，则 $(a,b) \in R$ ，例如(合肥，安徽)，(南京，江苏)，(洛阳，河南)等。
 >
 > 父子关系、兄弟关系、姐妹关系。
